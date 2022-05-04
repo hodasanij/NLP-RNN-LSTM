@@ -5,15 +5,20 @@
 	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<body>
+<body style="background-color: #25262d; color: #d6bbe0; text-align:center; margin-top:130px">
 
 	<header>
-		<div class="container">
-		<div id="brandname">
-			Machine Learning App with Flask
+		<div style="font-size: 24px; margin: 25px auto; width: 900px; height: 380px;">
+		<div>
+			Deep Learning App
 		</div>
-		<h2>Spam Detector For Email Messages</h2>
-		
+		<h1 style="font-family:Geneva; color:#bba4c7;">Spam Detector For Email Messages</h1>
+			<p style="font-size: 25px; color:#ecdbf7; ">Spam detection is an NLP classification problem.<br>
+			We employ deep learning; when they are strong at sequential input and have a memory, <br>
+				they can keep track of previous words and orders. <br> <br>
+				Our project's purpose is to create a comprehensive and reliable model that can predict
+				if a brief Email message is spam or non-spam. </p>
+
 	</div>
 	</header>
 
@@ -22,17 +27,19 @@
 		<form action="{{ url_for('predict')}}" method="POST">
 		<p>Enter Your Message Here</p>
 		<!-- <input type="text" name="comment"/> -->
-		<textarea name="message" rows="6" cols="50"></textarea>
+		<textarea name="message" rows="10" cols="50"></textarea>
 		<br/>
 
 		<input type="submit" class="btn-info" value="predict">
-		
+
 	</form>
-		
+
 	</div>
 
-	
-	
+
+	<footer style="background:#383944; color:white; height: 50px; bottom: 0px; left: 0px; right: 0px; position: fixed; margin-bottom: 0px;">
+  		<p>&copy; By: Hoda D.S - Spring 2022</p>
+	</footer>
 
 </body>
 </html>

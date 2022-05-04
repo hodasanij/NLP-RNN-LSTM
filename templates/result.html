@@ -4,29 +4,36 @@
 	<title></title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<body>
+<body style="background-color: #25262d; color: #d6bbe0; text-align:center; margin-top:130px">
 
 	<header>
 		<div class="container">
 		<div id="brandname">
-			ML App
+
 		</div>
-		<h2>Spam Detector For SMS Messages</h2>
+		<h1 style="font-family:Geneva; color:#bba4c7;">Spam Detector For Email Messages</h1>
 		
 	</div>
 	</header>
-	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<p style="font-size: 25px; color:#ecdbf7; "><b>Results for Comment</b></p>
 	<div class="results">
 
 
-		
+	{% if test_accuracy %}
+		<p style="font-size: 25px">The accuracy is :</p>{{ test_accuracy }}
+	{% endif %}
+
+
 	{% if prediction == 1%}
-	<h2 style="color:red;">Spam</h2>
+	<h2 style="color:red;">This Email is Spam</h2>
 	{% elif prediction == 0%}
-	<h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
+	<h2 style="color:green;">This Email is NOT a spam</h2>
 	{% endif %}
 
 	</div>
+		<footer style="background:#383944; color:white; height: 50px; bottom: 0px; left: 0px; right: 0px; position: fixed; margin-bottom: 0px;">
+  			<p>&copy; By: Hoda D.S - Spring 2022 </p>
+		</footer>
 
 </body>
 </html>
